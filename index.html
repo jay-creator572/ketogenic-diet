@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ketogenic Diet — App Case Study · Jasmine / Ming Gao</title>
+<meta name="description" content="Ketogenic Diet — a research-led mobile app that tells keto dieters what to eat each day and visualises their daily nutrient intake. Case study by Jasmine / Ming Gao, independent AI creator & designer.">
+<meta name="theme-color" content="#FFF6E3">
+<link rel="icon" href="assets/img/icon.png">
+<meta property="og:title" content="Ketogenic Diet — App Case Study">
+<meta property="og:description" content="A research-led mobile app for ketogenic dieters, by Jasmine / Ming Gao — independent AI creator & designer.">
+<meta property="og:image" content="https://jay-creator572.github.io/ketogenic-diet/assets/img/og-preview.png">
+<meta property="og:url" content="https://jay-creator572.github.io/ketogenic-diet/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="nav">
+  <div class="wrap">
+    <div class="pill">
+      <a href="#top" class="brand"><img src="assets/img/icon.png" alt="">Ketogenic Diet</a>
+      <nav class="links"><a href="#background">Background</a><a href="#research">Research</a><a href="#insights">Insights</a><a href="#structure">Structure</a><a href="#identity">Identity</a><a href="#design">Design</a></nav>
+    </div>
+    <div class="navr">
+      <a class="btn sm ghost" href="#play-plate" data-cursor="play!">Play ✦</a>
+      <a class="btn sm navcontact" href="#contact" data-cursor="say hi">Contact ✉</a>
+      <a class="btn sm" href="assets/keto-diet-portfolio.pdf" target="_blank" rel="noopener" data-cursor="PDF">PDF ↗</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div style="margin-bottom:28px"><span class="tag"><i></i>App case study · UX/UI · Nutrition</span></div>
+      <h1 id="heroTitle"><span class="l1">Ketogenic</span><span class="l2">Diet</span></h1>
+      <div class="sub">
+        <div class="creator"><b>Jasmine / Ming Gao</b><span>Independent AI Creator &amp; Designer</span></div>
+        <div class="hlinks"><a class="chip" href="mailto:jasmingao7@outlook.com">✉ jasmingao7@outlook.com</a><a class="chip" href="https://www.linkedin.com/in/ming-gao-46567838a" target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg> LinkedIn</a><a class="chip" href="#contact">Contact ↓</a></div>
+        <p class="lede">An app that answers the keto dieter's daily question — <b class="hl">what do I eat?</b> — and makes every day's nutrients visible at a glance.</p>
+      </div>
+    </div>
+    <div class="bzone" id="bzone">
+      <div class="basket" id="basket">
+        <svg class="b-back" viewBox="0 0 400 300"><path d="M70 120 C70 10 330 10 330 120" fill="none" stroke="#1B3010" stroke-width="16" stroke-linecap="round"/><path d="M70 120 C70 10 330 10 330 120" fill="none" stroke="#C98A4B" stroke-width="9" stroke-linecap="round"/><ellipse cx="200" cy="128" rx="178" ry="30" fill="#7A4E26" stroke="#1B3010" stroke-width="5"/></svg>
+        <div class="b-items" id="bItems"></div>
+        <svg class="b-front" viewBox="0 0 400 300"><defs><clipPath id="bclip"><path d="M24 128 Q200 168 376 128 L336 286 Q200 304 64 286 Z"/></clipPath></defs>
+          <path d="M24 128 Q200 168 376 128 L336 286 Q200 304 64 286 Z" fill="#E0A562"/>
+          <g clip-path="url(#bclip)" stroke="#B87638" stroke-width="5" fill="none">${''}</g>
+          <path d="M24 128 Q200 168 376 128 L336 286 Q200 304 64 286 Z" fill="none" stroke="#1B3010" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M22 128 Q200 170 378 128" fill="none" stroke="#1B3010" stroke-width="16" stroke-linecap="round"/><path d="M22 128 Q200 170 378 128" fill="none" stroke="#C98A4B" stroke-width="9" stroke-linecap="round"/></svg>
+        <div class="b-drop" id="bDrop">Drop food here</div>
+      </div>
+      <div class="bbudget box">
+        <div class="row" style="align-items:baseline;gap:10px"><b>Today's carb budget</b><span class="mono" id="bCarb">0 / 20 g</span></div>
+        <div class="btrack"><div class="bfill" id="bFill"></div><i style="left:100%"></i></div>
+        <div class="row" style="gap:8px;margin-top:10px"><span class="chip sm">✓ Keto <b id="bOk">0</b></span><span class="chip sm">✗ Not keto <b id="bNo">0</b></span><button class="chip sm" id="bReset" style="cursor:pointer">Empty basket ↺</button></div>
+      </div>
+      <div class="bfeed box" id="bFeed"><b>Is it keto?</b> Drag (or tap) a food into the basket — I'll check it against a 20 g daily carb budget.</div>
+    </div>
+  </div>
+  <div id="floaters"></div>
+  <div class="hint" id="dragHint">drag me into the basket ↘</div>
+</section>
+
+<div style="overflow:hidden;padding:30px 0"><div class="ticker"><div class="t" id="ticker"></div></div></div>
+
+<!-- BRIEF -->
+<section class="sec brief" style="padding-top:clamp(70px,9vw,130px)">
+  <div class="wrap">
+    <span class="tag rv"><i></i>The brief</span>
+    <p class="q rv d1" style="margin-top:26px">Eating keto means reading <span class="mark">every label.</span> This app does the reading <span class="stk" style="--s:var(--lime)">for you.</span></p>
+    <div class="grid2" style="margin-top:40px;align-items:end">
+      <p class="body rv">The ketogenic diet removes almost all carbohydrates, so dieters must monitor every meal. Existing apps felt complex, generic and tedious to log. This project turns research on real dieters into three simple jobs: <b class="hl">know what's low-GI</b>, <b class="hl">get a plan you can follow</b>, and <b class="hl">see your progress.</b></p>
+      <div class="box rv d1" style="padding:26px 28px;background:var(--sky)">
+        <span class="small mono" style="color:var(--ink)">DESIGNED BY</span>
+        <b class="h3" style="display:block;margin-top:10px">Jasmine / Ming Gao</b>
+        <p class="body" style="color:var(--ink);margin-top:6px">Independent AI creator &amp; designer. Research, information architecture, UI and branding — built on my EPQ paper <i>“An Evaluation of the Ketogenic Dieting”</i>.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="box stat rv" style="--s:var(--butter);--r:-2deg"><b data-count="100" data-prefix="~">~100</b><span>forum posts analysed</span></div>
+      <div class="box stat rv d1" style="--s:var(--pink);--r:1.5deg"><b data-count="18">18</b><span>days of self-experimentation</span></div>
+      <div class="box stat rv d2" style="--s:var(--sky);--r:-1deg"><b data-count="11">11</b><span>interviews — 1 expert, 10 dieters</span></div>
+      <div class="box stat rv d3" style="--s:var(--lime);--r:2deg"><b data-count="16">16</b><span>high-fidelity screens</span></div>
+    </div>
+    <div class="toc rv">
+      <a class="btn ghost" href="#background">01 Background</a><a class="btn ghost" href="#research">02 Research</a><a class="btn ghost" href="#insights">03 Insights</a><a class="btn ghost" href="#structure">04 Structure</a><a class="btn ghost" href="#identity">05 Identity</a><a class="btn" href="#design">06 Final design →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 01 BACKGROUND -->
+<section class="sec" id="background">
+  <div class="wrap">
+    <div class="sec-head"><span class="num rv">01 — Background</span><h2 class="h2 rv">High fat, moderate protein, <span class="mark" style="--hl:var(--apricot)">almost no carbs.</span></h2></div>
+    <div class="grid2" style="align-items:end">
+      <p class="lede rv">The ketogenic diet — commonly known as “keto” — supplies large amounts of fat, moderate protein and minimal carbohydrate, shifting the body from burning glucose to burning fat.</p>
+      <div class="rv d1"><span class="small mono">TYPICAL PLATE PROPORTION</span><div class="macro"><div class="f">FAT</div><div class="p">PROTEIN</div><div class="c">C</div></div></div>
+    </div>
+
+    <!-- plate game -->
+    <div id="play-plate" class="mt" style="scroll-margin-top:90px">
+      <div class="row rv" style="margin-bottom:30px">
+        <div><span class="tag" style="background:var(--butter)"><i style="background:var(--apricot)"></i>Interactive · try it</span><h3 class="h2" style="font-size:clamp(40px,5vw,76px);margin-top:18px">Build a <span class="stk" style="--s:var(--butter);--r:2deg">keto plate.</span></h3></div>
+        <p class="body" style="max-width:430px">Drag foods onto the plate (or tap them). Avo checks your macros live — can you keep carbs under 10% of calories?</p>
+      </div>
+      <div class="box game rv">
+        <div class="pantry">
+          <div class="row" style="align-items:center"><b class="h3" style="font-size:24px">The pantry</b><span class="small mono">KETO-FRIENDLY + HIGH-CARB</span></div>
+          <div class="tokens" id="tokens"></div>
+          <p class="small" style="margin-top:16px">Approximate values per typical serving, for illustration.</p>
+        </div>
+        <div class="tablezone">
+          <div class="row" style="align-items:center"><b class="h3" style="font-size:24px">Your plate</b><button class="btn sm ghost" id="plateReset">Clear plate ↺</button></div>
+          <div class="plate-wrap" id="plateWrap"><div class="plate" id="plate"></div><div class="plate-empty" id="plateEmpty">Drop food here</div></div>
+          <div class="meter">
+            <div class="leg"><span>CALORIES FROM</span><span id="kcal">0 kcal · 0 g net carbs</span></div>
+            <div class="bar3"><div id="mF" style="background:var(--butter);width:0"></div><div id="mP" style="background:var(--leaf);width:0"></div><div id="mC" style="background:var(--apricot);width:0"></div></div>
+            <div class="leg"><span>■ Fat <b id="pF">0%</b></span><span>■ Protein <b id="pP">0%</b></span><span>■ Carbs <b id="pC">0%</b></span></div>
+            <div class="verdict"><div class="avo" id="plateAvo"></div><div><b id="vTitle">An empty plate…</b><p id="vText">Avo is waiting. Add something tasty.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid2 mt">
+      <div class="box ink-card rv">
+        <div class="row" style="align-items:baseline"><b class="h3">The metabolic pathway</b><span class="small mono">Masino &amp; Rho, 2012</span></div>
+        <p class="body" style="margin-top:12px">Keto has gained significant attention for its potential to address <b class="hl">obesity, diabetes</b> and <b class="hl">neurological disorders.</b></p>
+        <img src="assets/img/pathway-ink.png" alt="Diagram of the ketogenic metabolic pathway" style="margin-top:18px;clip-path:inset(0 0 9% 0)">
+      </div>
+      <div class="rv d1">
+        <span class="tag"><i></i>Benefits &amp; risks</span>
+        <h3 class="h3" style="font-size:clamp(32px,3.4vw,50px);margin:18px 0 26px">A powerful diet — <span class="mark" style="--hl:var(--pink)">with real trade-offs.</span></h3>
+        <div class="br">
+          <div class="box" style="background:var(--lime)"><span class="mono small" style="color:var(--ink)">+ BENEFITS</span><ul style="margin-top:16px"><li>Weight reduction</li><li>Lower risk of cardiovascular disease</li><li>Aids blood-sugar regulation for type 2 diabetes</li></ul></div>
+          <div class="box" style="background:var(--pink)"><span class="mono small" style="color:var(--ink)">− RISKS</span><ul style="margin-top:16px"><li>Nutrient deficiencies</li><li>Disrupted gut flora</li><li>Possible adverse cardiovascular effects</li><li>Hard to sustain long-term</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt">
+      <div class="row rv" style="margin-bottom:40px"><h3 class="h2" style="font-size:clamp(40px,5vw,76px)">Four rules for eating keto <span class="stk" style="--s:var(--sky)">well.</span></h3><p class="body" style="max-width:430px">Cutting carbs is only half of it. A healthy keto plate still needs micronutrients, fibre, good fats and quality protein.</p></div>
+      <div class="foods">
+        <div class="polar rv" style="--r:-3deg"><div class="ph"><img src="assets/img/f-mg.jpg" alt="Magnesium-rich foods" loading="lazy"></div><div class="n">01</div><h4>Vitamins &amp; minerals</h4><p class="small">Nutrient-dense, low-carb veg like spinach, cauliflower and bell peppers.</p></div>
+        <div class="polar rv d1" style="--r:2deg"><div class="ph"><img src="assets/img/f-fiber.jpg" alt="High-fibre meals" loading="lazy" style="object-position:center 70%"></div><div class="n">02</div><h4>Fibre &amp; low-starch veg</h4><p class="small">Spinach, kale and zucchini provide fibre and micronutrients.</p></div>
+        <div class="polar rv d2" style="--r:-1.5deg"><div class="ph"><img src="assets/img/f-omega.jpg" alt="Omega-3 foods" loading="lazy" style="object-position:center 60%"></div><div class="n">03</div><h4>Healthy fats &amp; omega-3</h4><p class="small">Avocados, olive oil, nuts and high-fat fish support heart health.</p></div>
+        <div class="polar rv d3" style="--r:3deg"><div class="ph"><img src="assets/img/f-protein.jpg" alt="Protein sources" loading="lazy"></div><div class="n">04</div><h4>Protein quality</h4><p class="small">Adequate protein prevents muscle loss during weight loss.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 RESEARCH -->
+<section class="sec" id="research">
+  <div class="wrap">
+    <div class="sec-head"><span class="num rv">02 — Research</span><h2 class="h2 rv">What are keto dieters <span class="mark">talking about?</span></h2></div>
+    <div class="grid2" style="grid-template-columns:.65fr 1.35fr;align-items:start" id="resGrid">
+      <div class="rv">
+        <div class="box" style="padding:24px;background:var(--paper)"><span class="small mono">AIM</span><p class="body" style="margin-top:8px">Investigate the nature of discussions around the ketogenic diet on social media forums.</p></div>
+        <div class="box" style="padding:24px;background:var(--paper);margin-top:16px"><span class="small mono">SAMPLE</span><p class="body" style="margin-top:8px">~100 newly published posts, coded into themes to find the dominant trends in the keto community.</p></div>
+      </div>
+      <div class="bars rv d1" id="bars"></div>
+    </div>
+    <div class="findings">
+      <div class="box rv" style="--s:var(--butter)"><span class="small mono">FINDING 01</span><p>Most discussion is about recipes and meal planning.</p></div>
+      <div class="box rv d1" style="--s:var(--sky)"><span class="small mono">FINDING 02</span><p>Forums act as a place to record and share progress.</p></div>
+      <div class="box rv d2" style="--s:var(--pink)"><span class="small mono">FINDING 03</span><p>“Lack of energy, insomnia, hair loss, low blood sugar, irregular periods.”</p></div>
+    </div>
+
+    <!-- diary -->
+    <div class="mt">
+      <div class="row rv" style="margin-bottom:30px">
+        <div><span class="tag"><i></i>Self-experimentation · diary study</span><h3 class="h2" style="font-size:clamp(40px,5vw,76px);margin-top:18px">I went keto for two weeks <span class="stk" style="--s:var(--pink);--r:2deg">to feel it.</span></h3></div>
+        <p class="body" style="max-width:430px">2 prep days, 14 keto days, 2 recovery days. Drag along the timeline to replay each day's blood glucose, sleep, exercise and mood.</p>
+      </div>
+      <div class="box diary rv">
+        <svg class="dchart" id="dchart" viewBox="0 0 1000 300" role="img" aria-label="Fasting and postprandial blood glucose over 18 days"></svg>
+        <div class="dctrl"><button class="btn sm" id="dplay">▶ Play</button><input type="range" id="drange" min="0" max="15" value="0" aria-label="Diary day"><span class="small mono" id="dlegend">● fasting &nbsp;● post-meal (mmol/L)</span></div>
+        <div class="dcard" id="dcard"></div>
+      </div>
+      <div class="trio">
+        <div class="box rv" style="--s:var(--lime)"><span class="small mono">BLOOD SUGAR</span><b>Stable</b><p class="small" style="color:var(--ink2);margin-top:8px">Fasting stayed 4.5–4.9 mmol/L through keto.</p></div>
+        <div class="box rv d1" style="--s:var(--butter)"><span class="small mono">WEIGHT</span><b>−2.6 kg</b><p class="small" style="color:var(--ink2);margin-top:8px">Lost over the 14 keto days.</p></div>
+        <div class="box rv d2" style="--s:var(--pink)"><span class="small mono">HOW I FELT</span><b>“Keto flu”</b><p class="small" style="color:var(--ink2);margin-top:8px">Hunger, headache and low energy early on — focus later.</p></div>
+      </div>
+    </div>
+
+    <!-- interviews -->
+    <div class="mt">
+      <span class="tag rv"><i></i>Interviews · 1 expert + 10 dieters</span>
+      <h3 class="h2 rv" style="font-size:clamp(40px,5vw,76px);margin:18px 0 40px">One diet, <span class="mark" style="--hl:var(--sky)">very different</span> dieters.</h3>
+      <div class="box quote-card rv">
+        <span class="tag">Expert · nutritionist, 8 years of experience</span>
+        <p class="qq">“Keto is an almost total elimination of carbohydrates — it requires <em>meticulous monitoring</em> of food intake.”</p>
+        <div class="pts">
+          <div><h5>The view</h5><p>Not the same as “low-carb” — it is close to no carb, so food labels must be checked again and again.</p></div>
+          <div><h5>Who it suits</h5><p>Epilepsy, PCOS, high blood lipids and cholesterol, blood-sugar control, and people who are overweight.</p></div>
+          <div><h5>The advice</h5><p>Check your body is suitable first, then reduce carbs gradually rather than jumping to zero.</p></div>
+        </div>
+      </div>
+      <div class="chips rv" style="margin-top:30px"><span class="chip">👥 10 dieters</span><span class="chip">5 women · 5 men</span><span class="chip">Ages 18–30 · 31–49 · 50+</span><span class="chip">From social-media keto groups</span></div>
+      <div class="qa">
+        <div class="box rv" style="background:var(--paper)"><span class="small mono">Q1 · WHY DID YOU START?</span><b class="h3" style="display:block;margin-top:12px">Age shapes motivation</b><p class="body" style="margin-top:10px"><b class="hl">Older participants</b> started for health concerns such as pre-diabetes or weight management. <b class="hl">Younger participants</b> were driven by lifestyle goals like weight loss.</p></div>
+        <div class="box rv d1" style="background:var(--paper)"><span class="small mono">Q2 · HOW DID YOU PREPARE?</span><b class="h3" style="display:block;margin-top:12px">Gender shapes preparation</b><p class="body" style="margin-top:10px"><b class="hl">Women</b> planned meals and consulted a professional first. <b class="hl">Men</b> started with minimal preparation, relying on online communities.</p></div>
+      </div>
+      <div class="box summary rv">
+        <span class="small mono" style="color:var(--ink)">SUMMARY</span>
+        <p class="h3" style="margin-top:12px;max-width:900px">Motivation, preparation and staying power all differ — so the app has to adapt to the individual, not the average.</p>
+        <div class="three">
+          <div><b>6–12 months</b><p class="body">Typical time most participants stayed on keto.</p></div>
+          <div><b>Prepared → better</b><p class="body">Older dieters benefited from thorough preparation; younger ones relied on willpower.</p></div>
+          <div><b>No one-size plan</b><p class="body">Individual differences must shape goals, menus and guidance.</p></div>
+        </div>
+      </div>
+      <p class="small rv" style="margin-top:22px">Research and data from my EPQ paper “An Evaluation of the Ketogenic Dieting”.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 03 INSIGHTS -->
+<section class="sec" id="insights">
+  <div class="wrap">
+    <div class="sec-head"><span class="num rv">03 — Insights</span><h2 class="h2 rv">Where today's apps <span class="mark" style="--hl:var(--pink)">lose people.</span></h2></div>
+    <div class="scroll-x drag rv"><div class="box journey" id="journey"></div></div>
+
+    <div class="mt">
+      <div class="row rv" style="margin-bottom:36px"><h3 class="h2" style="font-size:clamp(40px,5vw,76px)">Three pains. <span class="stk" style="--s:var(--lime)">Flip them.</span></h3><button class="btn ghost rv" id="flipAll">Flip all ↻</button></div>
+      <div class="flips" id="flips"></div>
+      <div class="mind">
+        <div class="box rv" style="--s:var(--paper)"><h5>🏠 Home</h5><ul style="margin-top:10px"><li>Home reminder</li><li>GI ranking</li><li>Nourishment</li></ul></div>
+        <div class="box rv d1" style="--s:var(--butter)"><h5>🥗 Recipe</h5><ul style="margin-top:10px"><li>Food classification</li><li>Search recipes</li><li>Recommended · Custom</li></ul></div>
+        <div class="box rv d2" style="--s:var(--sky)"><h5>📅 Plan</h5><ul style="margin-top:10px"><li>Lose / maintain weight</li><li>Muscle-building</li><li>Seven-day diet · Add plan</li></ul></div>
+        <div class="box rv d3" style="--s:var(--pink)"><h5>📈 Visualise</h5><ul style="margin-top:10px"><li>Clock-in · Schedule</li><li>Daily completion</li><li>Weight-change curve</li></ul></div>
+      </div>
+      <p class="small rv" style="margin-top:16px">Brainstorm ideas, clustered into four pillars — which became the app's structure.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GI GAME -->
+<section class="band" style="--b:var(--sky)" id="gi-game">
+  <div class="wrap">
+    <div class="row rv">
+      <div><span class="tag"><i style="background:var(--apricot)"></i>Mini game · uses the app's GI data</span><h2 class="h2" style="margin-top:18px">Which one is <span class="stk" style="--s:var(--butter)">lower GI?</span></h2></div>
+      <p class="body" style="max-width:420px;color:var(--ink)">The app's GI ranking turns fuzzy food knowledge into a clear order. Test your instinct — tap the food you think raises blood sugar less.</p>
+    </div>
+    <div class="gi-game rv">
+      <button class="box gi-opt" data-i="0"></button>
+      <div class="vs">VS</div>
+      <button class="box gi-opt" data-i="1"></button>
+    </div>
+    <div class="gi-bar rv">
+      <div class="gi-msg" id="giMsg">Pick one 👆</div>
+      <div class="score"><span class="chip">Score <b id="giScore">0</b></span><span class="chip">Streak 🔥 <b id="giStreak">0</b></span><button class="btn sm" id="giNext">Next pair →</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 STRUCTURE -->
+<section class="sec" id="structure">
+  <div class="wrap">
+    <div class="sec-head"><span class="num rv">04 — Structure</span><h2 class="h2 rv">Four tabs. <span class="mark" style="--hl:var(--lime)">Nothing extra.</span></h2></div>
+    <div class="scroll-x drag rv"><div class="ia" id="ia"></div></div>
+    <div class="row mt rv" style="margin-bottom:28px"><h3 class="h2" style="font-size:clamp(40px,5vw,76px)">Wireframes first, <span class="stk" style="--s:var(--pink)">pixels later.</span></h3><p class="body" style="max-width:420px">Fifteen greyscale screens tested the full path before any colour was applied. Drag sideways to explore →</p></div>
+  </div>
+  <div class="scroll-x drag rv" style="padding-left:var(--gut)">
+    <div class="lofi">
+      <figure><img src="assets/img/lofi-2.png" alt="Onboarding wireframes" loading="lazy"><figcaption><span class="tag">A · Onboarding</span></figcaption></figure>
+      <figure><img src="assets/img/lofi-1.png" alt="Home and recipe wireframes" loading="lazy"><figcaption><span class="tag">B · Home &amp; Recipe</span></figcaption></figure>
+      <figure style="margin-right:var(--gut)"><img src="assets/img/lofi-3.png" alt="Punch and Me wireframes" loading="lazy"><figcaption><span class="tag">C · Punch &amp; Me</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 05 IDENTITY -->
+<section class="sec" id="identity">
+  <div class="wrap">
+    <div class="sec-head"><span class="num rv">05 — Visual identity</span><h2 class="h2 rv">Fresh, friendly, <span class="stk" style="--s:var(--lime);--r:-2deg">a little surprised.</span></h2></div>
+    <div class="idg">
+      <div class="box logo-card rv">
+        <span class="tag" style="background:var(--lime)">Logo</span>
+        <img src="assets/img/icon.png" alt="App icon: a surprised avocado" class="tint">
+        <div class="wm"><b>Keto diet</b><p>A surprised avocado — keto's signature fat — and a nutrient-ring “o” that echoes the data at the heart of the app.</p></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div class="box typecard rv d1"><span class="small mono">TYPE · PINGFANG SC</span>
+          <div><span style="font-weight:800;font-size:34px">Aa Heavy</span><span class="mono small">20px</span></div>
+          <div><span style="font-weight:500;font-size:28px">Aa Medium</span><span class="mono small">16px</span></div>
+          <div><span style="font-weight:400;font-size:22px">Aa Regular</span><span class="mono small">12px</span></div>
+        </div>
+        <div class="box rv d2" style="padding:30px;background:var(--p-mint);transition:background .4s"><span class="small mono">ICONS &amp; MASCOT</span>
+          <div class="icons"><figure><img src="assets/img/i-home.png" alt=""><figcaption>Home</figcaption></figure><figure><img src="assets/img/i-recipe.png" alt=""><figcaption>Recipe</figcaption></figure><figure><img src="assets/img/i-punch.png" alt=""><figcaption>Punch</figcaption></figure><figure><img src="assets/img/i-me.png" alt="" style="height:46px"><figcaption>Me</figcaption></figure><figure><img src="assets/img/avo.png" alt="" style="height:70px"><figcaption>Avo</figcaption></figure></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box play rv" id="playground">
+      <div class="ctl">
+        <span class="tag" style="background:var(--butter)"><i style="background:var(--apricot)"></i>Colour playground · live</span>
+        <h3 class="h3" style="margin-top:16px">Click any swatch to recolour the app.</h3>
+        <p class="body" style="margin-top:10px">Every prototype on this page updates instantly — icons and the logo shift hue to match. Try a preset, or let it shuffle a harmonious palette.</p>
+        <div class="swatches" id="swatches"></div>
+        <div class="presets" id="presets"></div>
+        <div class="contrast" id="contrast"></div>
+      </div>
+      <div class="stage"><div style="zoom:.62" id="playPhone"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 FINAL DESIGN -->
+<section class="sec" id="design">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0"><span class="num rv">06 — Final design</span><h2 class="h2 rv">Scroll through it. <span class="stk" style="--s:var(--butter)">Or tap around.</span></h2></div>
+    <div class="scrolly">
+      <div class="sticky"><div class="blob"></div><div class="proto-wrap" id="proto"></div><span class="tag ptip" style="background:var(--pink)"><i style="background:var(--apricot)"></i>Live prototype — tap the screen</span></div>
+      <div class="steps" id="steps"></div>
+    </div>
+    <div class="mobile-proto" style="margin-top:46px"><div class="mp"><div class="mchips" id="mchips"></div><div class="mphone" id="mproto"></div><div class="cap" id="mcap"></div></div></div>
+  </div>
+  <div class="mt">
+    <div class="wrap" style="margin-bottom:10px"><span class="tag rv"><i></i>All 16 screens · original design files</span></div>
+    <div class="wall rv"><div class="track" id="t1"></div><div class="track rev" id="t2"></div></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-avo" id="fAvo" data-cursor="poke"><div id="footAvo"></div><div class="bubble" id="bubble"></div></div>
+    <div class="big">Thank <span>you.</span></div>
+    <p class="lede" style="margin-top:34px"><b style="color:var(--ink)">Jasmine / Ming Gao</b> — Independent AI Creator &amp; Designer</p>
+    <div class="contact box" id="contact">
+      <span class="tag" style="background:var(--lime)"><i style="background:var(--forest)"></i>Let's talk</span>
+      <p class="h3" style="margin-top:16px">Open to internships, collaborations and AI creative projects.</p>
+      <div class="crow">
+        <a class="btn" href="mailto:jasmingao7@outlook.com" data-cursor="email">✉ jasmingao7@outlook.com</a>
+        <button class="btn ghost" id="copyMail" data-cursor="copy">Copy email</button>
+        <a class="btn li" href="https://www.linkedin.com/in/ming-gao-46567838a" target="_blank" rel="noopener" data-cursor="connect"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.6 8.65 21 11.2 21 14.4V21h-4v-5.9c0-1.4-.03-3.2-1.95-3.2-1.95 0-2.25 1.52-2.25 3.1V21H9z"/></svg> LinkedIn</a>
+      </div>
+    </div>
+    <details class="credits"><summary>Food photo credits</summary><p id="credits"></p></details>
+    <div class="frow"><span class="tag">Ketogenic Diet · app case study</span><div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><a class="btn" href="assets/keto-diet-portfolio.pdf" target="_blank" rel="noopener">Download PDF ↗</a><a class="btn ghost" href="#top">Back to top ↑</a></div></div>
+  </div>
+</footer>
+
+<div class="cur" id="cur"></div>
+<div class="toast" id="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
